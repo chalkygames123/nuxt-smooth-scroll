@@ -27,11 +27,13 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [],
+  // 2.4 より前の書き方。3 からは非推奨になる。
+  // plugins: [{ src: '~/plugins/smooth-scroll.client', ssr: false }],
+  plugins: [{ src: '~/plugins/smooth-scroll.client', mode: 'client' }],
   /*
    ** Nuxt.js modules
    */
-  modules: ['@nuxtjs/eslint-module'],
+  modules: ['@nuxtjs/eslint-module', 'vue-scrollto/nuxt'],
   /*
    ** Build configuration
    */
